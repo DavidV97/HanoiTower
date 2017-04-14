@@ -1,12 +1,29 @@
 #include "Gestor.h"
 
+Gestor::Gestor() {}
 
+void Gestor::agregarJugador(string pnombre) {
+	Jugador jugador(pnombre);
+	listaJugadores.agregarJugador(jugador);
+}
 
-Gestor::Gestor()
+string Gestor::mostrarJugadores() {
+
+	return listaJugadores.mostrarJugadores();
+}
+
+string Gestor::buscarJugador(string pcodigo)
 {
+	return listaJugadores.buscarInfoDelJugador(pcodigo);
 }
 
 
-Gestor::~Gestor()
+bool Gestor::validarSiHayJugadores()
 {
+	return listaJugadores.ListjugadoresVacio();
+}
+
+Jugador Gestor::encontrarObjJugador()
+{
+	return Jugador();
 }
